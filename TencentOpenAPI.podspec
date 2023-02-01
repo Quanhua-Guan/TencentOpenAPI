@@ -17,8 +17,10 @@ Pod::Spec.new do |s|
   s.public_header_files = 'TencentOpenAPI.framework/Headers/*.h'
   s.vendored_frameworks = 'TencentOpenAPI.framework'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+    'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/TencentOpenAPI.framework/Headers"'
+  }
   s.requires_arc = true
-  s.target_xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(SRCROOT)/TencentOpenAPI.framework/Headers"' }
 
 end
