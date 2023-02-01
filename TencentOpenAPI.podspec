@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   
-  s.name = 'TencentOpenAPI_iOS_V3'
+  s.name = 'TencentOpenAPI'
   s.version = '3.5.14'
   s.summary = 'TencentOpenAPI, why not pod'
 
