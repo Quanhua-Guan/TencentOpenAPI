@@ -14,15 +14,10 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
   s.resources = '*.bundle'
-  s.public_header_files = '*.framework/Headers/*.h'
-  s.source_files = '*.framework/Headers/*.{h}'
-  s.vendored_frameworks = '*.framework'
+  s.public_header_files = 'TencentOpenAPI.framework/Headers/*.h'
+  s.vendored_frameworks = 'TencentOpenAPI.framework'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.requires_arc = true
-  s.xcconfig = { 
-    "HEADER_SEARCH_PATHS" => "$(SRC_ROOT)/TencentOpenAPI.framework/Headers",
-    "FRAMEWORK_SEARCH_PATHS" => "$(SRC_ROOT)"
-  }
 
 end
