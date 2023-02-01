@@ -20,6 +20,6 @@ Pod::Spec.new do |s|
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.requires_arc = true
-  s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(SRCROOT)" }
+  s.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(SRCROOT)/Frameworks", "HEADER_SEARCH_PATHS" => "$(SRCROOT)" }
 
 end
